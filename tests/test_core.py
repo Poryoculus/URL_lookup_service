@@ -1,5 +1,6 @@
 from src.core import check_url_safety
 
+
 def test_clean_url():
     url = "http://google.com"
     result = check_url_safety(url)

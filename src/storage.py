@@ -6,7 +6,7 @@ MALWARE_URLS = {
     "http://notsoftserver.com/hack",
 }
 
-#This url are just test data and will be changed by a json in the local 
+#This url are just test data and will be changed by a json in the local
 #or even a     return not is_malware(url)
 
 def is_malware(url: str) -> bool:

@@ -1,5 +1,6 @@
 from src.storage import is_malware
 
+
 def check_url_safety(full_url: str) -> bool:
     """
     Check if the given URL is malicious by querying the storage module.
