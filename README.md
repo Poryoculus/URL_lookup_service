@@ -28,9 +28,29 @@ Goals
 • Basic automated tests
 • Clean Git workflow
 
-Running Locally
+Installation & Usage
 
-Instructions will be added after the initial implementation.
+1. Clone the repository
+   git clone <your-repo-url>
+   cd URL_lookup_service
+   
+2. Create a Python virtual environment
+   python3 -m venv .venv
+   source .venv/bin/activate   # On Linux/macOS
+   # .venv\Scripts\activate    # On Windows
+  
+3. Install dependencies
+   pip install --upgrade pip
+   pip install -r requirements.txt
+
+4. Run the application
+   uvicorn src.main:app --reload
+   
+The API will run at: http://127.0.0.1:8000￼
+Open http://127.0.0.1:8000/docs￼ to view the Swagger UI.
+
+5. Run tests
+  in terminal insert: pytest
 
 Development Notes
 
