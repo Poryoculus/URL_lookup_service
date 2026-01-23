@@ -1,0 +1,17 @@
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+select = [
+"E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes (undefined names, unused imports)
+    "B",   # flake8-bugbear (common bugs)
+    "I",   # isort (import order)
+    "UP",  # pyupgrade (modern Python)
+    "C4",  # flake8-comprehensions (readability)
+]
+
+ignore = [
+    "E501",
+]
