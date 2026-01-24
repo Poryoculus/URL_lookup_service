@@ -1,8 +1,11 @@
+import logging
 import os
 
 from sqlalchemy import create_engine
 
 DATABASE_URL = os.getenv("DATABASE_URL")
+
+logger = logging.getLogger(__name__)
 
 _engine = None
 
@@ -12,5 +15,9 @@ def get_engine():
         db_url = os.getenv("DATABASE_URL")
         if not db_url:
             raise RuntimeError("DATABASE_URL is not set")
-        _engine = create_engine(db_url, echo=True)
+
+        logger.info("Creating database engine")
+
+        _engine = create_engine(db_url,
+                                echo=True)
     return _engine
