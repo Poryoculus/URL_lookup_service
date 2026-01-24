@@ -1,5 +1,7 @@
-from src.db import engine
 from sqlalchemy import text
+
+from src.db import engine
+
 
 def is_malware(url: str) -> bool:
     with engine.connect() as conn:
