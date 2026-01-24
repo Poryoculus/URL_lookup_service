@@ -1,4 +1,5 @@
 import pytest
+
 from src.migrations import run_migrations
 
 
