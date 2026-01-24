@@ -24,6 +24,8 @@ def url_info(hostname_and_port: str, original_path: str, request: Request):
 
     result = check_url_safety(full_url)
 
+    logger.info(f"Checked URL: {full_url} - Result: {result}")
+
     return {
         "hostname_and_port": hostname_and_port,
         "path": original_path,
