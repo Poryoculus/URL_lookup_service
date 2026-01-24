@@ -12,7 +12,6 @@ def health():
 
 @app.get("/urlinfo/1/{hostname_and_port}/{original_path:path}")
 
-#If the time allows me i would like to add a function that normalizes the url before checking it
 
 def url_info(hostname_and_port: str, original_path: str, request: Request):
     query = request.url.query
