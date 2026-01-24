@@ -28,5 +28,7 @@ jobs:
           ruff check .
 
       - name: Run tests
+        env:
+          DATABASE_URL: ${{secrets.DATABASE_URL}}
         run: |
           pytest
