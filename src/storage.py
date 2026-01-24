@@ -2,6 +2,7 @@ from sqlalchemy import text
 
 from src.db import get_engine
 
+
 def is_malware(url: str) -> bool:
     engine = get_engine()
     with engine.connect() as conn:
