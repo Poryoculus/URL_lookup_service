@@ -1,9 +1,31 @@
+[project]
+name = "malware-api"
+version = "0.1.0"
+description = "Malware URL checking API"
+requires-python = ">=3.12"
+
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "sqlalchemy",
+    "psycopg[binary]",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+# -----------------------
+# Ruff (your original config)
+# -----------------------
 [tool.ruff]
 line-length = 120
 target-version = "py312"
 
 select = [
-"E",   # pycodestyle errors
+    "E",   # pycodestyle errors
     "W",   # pycodestyle warnings
     "F",   # pyflakes (undefined names, unused imports)
     "B",   # flake8-bugbear (common bugs)
@@ -15,3 +37,10 @@ select = [
 ignore = [
     "E501",
 ]
+
+# -----------------------
+# Pytest (optional but nice)
+# -----------------------
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"
