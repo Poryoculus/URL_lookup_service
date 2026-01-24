@@ -3,4 +3,5 @@ uvicorn
 pytest
 ruff
 psycopg[binary]
+psycopg2-binary
 sqlalchemy
